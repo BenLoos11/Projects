@@ -1,0 +1,417 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
+\documentclass[
+]{article}
+\usepackage{amsmath,amssymb}
+\usepackage{iftex}
+\ifPDFTeX
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math} % this also loads fontspec
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+\usepackage{lmodern}
+\ifPDFTeX\else
+  % xetex/luatex font selection
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\usepackage[margin=1in]{geometry}
+\usepackage{color}
+\usepackage{fancyvrb}
+\newcommand{\VerbBar}{|}
+\newcommand{\VERB}{\Verb[commandchars=\\\{\}]}
+\DefineVerbatimEnvironment{Highlighting}{Verbatim}{commandchars=\\\{\}}
+% Add ',fontsize=\small' for more characters per line
+\usepackage{framed}
+\definecolor{shadecolor}{RGB}{248,248,248}
+\newenvironment{Shaded}{\begin{snugshade}}{\end{snugshade}}
+\newcommand{\AlertTok}[1]{\textcolor[rgb]{0.94,0.16,0.16}{#1}}
+\newcommand{\AnnotationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\AttributeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\BaseNTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\BuiltInTok}[1]{#1}
+\newcommand{\CharTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\CommentTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\CommentVarTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ConstantTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\ControlFlowTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\DataTypeTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{#1}}
+\newcommand{\DecValTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\DocumentationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\ErrorTok}[1]{\textcolor[rgb]{0.64,0.00,0.00}{\textbf{#1}}}
+\newcommand{\ExtensionTok}[1]{#1}
+\newcommand{\FloatTok}[1]{\textcolor[rgb]{0.00,0.00,0.81}{#1}}
+\newcommand{\FunctionTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\ImportTok}[1]{#1}
+\newcommand{\InformationTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\newcommand{\KeywordTok}[1]{\textcolor[rgb]{0.13,0.29,0.53}{\textbf{#1}}}
+\newcommand{\NormalTok}[1]{#1}
+\newcommand{\OperatorTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\OtherTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{#1}}
+\newcommand{\PreprocessorTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textit{#1}}}
+\newcommand{\RegionMarkerTok}[1]{#1}
+\newcommand{\SpecialCharTok}[1]{\textcolor[rgb]{0.81,0.36,0.00}{\textbf{#1}}}
+\newcommand{\SpecialStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\StringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\VariableTok}[1]{\textcolor[rgb]{0.00,0.00,0.00}{#1}}
+\newcommand{\VerbatimStringTok}[1]{\textcolor[rgb]{0.31,0.60,0.02}{#1}}
+\newcommand{\WarningTok}[1]{\textcolor[rgb]{0.56,0.35,0.01}{\textbf{\textit{#1}}}}
+\usepackage{graphicx}
+\makeatletter
+\newsavebox\pandoc@box
+\newcommand*\pandocbounded[1]{% scales image to fit in text height/width
+  \sbox\pandoc@box{#1}%
+  \Gscale@div\@tempa{\textheight}{\dimexpr\ht\pandoc@box+\dp\pandoc@box\relax}%
+  \Gscale@div\@tempb{\linewidth}{\wd\pandoc@box}%
+  \ifdim\@tempb\p@<\@tempa\p@\let\@tempa\@tempb\fi% select the smaller of both
+  \ifdim\@tempa\p@<\p@\scalebox{\@tempa}{\usebox\pandoc@box}%
+  \else\usebox{\pandoc@box}%
+  \fi%
+}
+% Set default figure placement to htbp
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
+\providecommand{\tightlist}{%
+  \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
+\setcounter{secnumdepth}{-\maxdimen} % remove section numbering
+\usepackage{bookmark}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\urlstyle{same}
+\hypersetup{
+  pdftitle={Ben Loos Final Project STAT 600},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+
+\title{Ben Loos Final Project STAT 600}
+\author{}
+\date{\vspace{-2.5em}}
+
+\begin{document}
+\maketitle
+
+The problem comes from data that is received from an agricultural field
+for crop performance. While there can be many factors that can
+contribute to how crops perform, we want to look at the seeding rate and
+if that has anything to do with the growth rate for certain crops. The
+reason we want to look at this variable is because it can be a great
+indicator for farmers' how if it can greatly impact on the productivity
+of the harvest. The goal of this analysis is to figure out if we can
+show how the data from recent years can help with the most recent data
+on past yields, and the current yields. The way we are going to do this
+is by aggregating the yield and seeding data in 50 m x 50m grid cells,
+which should help reduce noise and help create spatial framework. After
+we gather data on this, we will turn to normalizing the data to account
+for the different units across crops such as soybean yield being 60
+bu/acre while corn yield is 180 bu/acre. This will allow for better
+comparison between the crops and will allow for better analysis on the
+question of whether the seeding rate can indicate how the yield will
+turn out. The variables that we will use from these data sets are the
+`Northing' and `Easting' variable to help organize and sort the data
+with these variables indciating the current location of the plots. Then
+we will use the `yield' and `AppliedRate' variables as our parameters
+for conducting our analysis and plotting.
+
+\#\#Grid - The grid will become the main focal point. We want to create
+the data in a grid to help show how the plots look somewhat like how
+they would be interpreted in the field. In addition, we will create a
+variable called ``Cell'' which will help distribute the data so that we
+can combine sections of the same field into the plot and make geospatial
+easier to interpret. We will use the `Northing' and `Easting' variables
+to help create the variable.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#read in the files }
+\NormalTok{soyharvest17 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Users/DSU/Downloads/A 2017 Soybeans Harvest.csv"}\NormalTok{)}
+\NormalTok{ cornharvest18}\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Users/DSU/Downloads/A 2018 Corn Harvest.csv"}\NormalTok{)}
+\NormalTok{cornseed18 }\OtherTok{\textless{}{-}}\FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Users/DSU/Downloads/A 2018 Corn Seeding.csv"}\NormalTok{)}
+\NormalTok{soyharvest19 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Users/DSU/Downloads/A 2019 Soybeans Harvest.csv"}\NormalTok{)}
+\NormalTok{cornharvest20 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Users/DSU/Downloads/A 2020 Corn Harvest.csv"}\NormalTok{)}
+\NormalTok{cornseed20 }\OtherTok{\textless{}{-}} \FunctionTok{read.csv}\NormalTok{(}\StringTok{"C:/Users/DSU/Downloads/A 2020 Corn Seeding.csv"}\NormalTok{)}
+
+\CommentTok{\#create function for the spatial grid }
+\NormalTok{gridfuction }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(gridcells) \{}
+  \CommentTok{\#the row variable should help define the northing variable into the grid and help with creating cell variable }
+\NormalTok{  gridcells}\SpecialCharTok{$}\NormalTok{row }\OtherTok{\textless{}{-}} \FunctionTok{ceiling}\NormalTok{(gridcells}\SpecialCharTok{$}\NormalTok{Northing }\SpecialCharTok{/} \DecValTok{50}\NormalTok{)}
+  \CommentTok{\#Column variable goes with the cell variable but using the Easting variable}
+\NormalTok{  gridcells}\SpecialCharTok{$}\NormalTok{column }\OtherTok{\textless{}{-}} \FunctionTok{ceiling}\NormalTok{(gridcells}\SpecialCharTok{$}\NormalTok{Easting }\SpecialCharTok{/} \DecValTok{50}\NormalTok{)}
+  \CommentTok{\#Creating the cell variable to help identify spatial data with plots }
+\NormalTok{  gridcells}\SpecialCharTok{$}\NormalTok{cell }\OtherTok{\textless{}{-}}\NormalTok{ gridcells}\SpecialCharTok{$}\NormalTok{row }\SpecialCharTok{*} \DecValTok{1000} \SpecialCharTok{+}\NormalTok{ gridcells}\SpecialCharTok{$}\NormalTok{column}
+  \FunctionTok{return}\NormalTok{(gridcells)}
+\NormalTok{\}}
+\CommentTok{\#convert the normal data frame to the grid and create variable row, column, and the identifying variable cell }
+\NormalTok{soyharvest17  }\OtherTok{\textless{}{-}} \FunctionTok{gridfuction}\NormalTok{(soyharvest17)}
+\NormalTok{cornharvest18 }\OtherTok{\textless{}{-}} \FunctionTok{gridfuction}\NormalTok{(cornharvest18)}
+\NormalTok{soyharvest19  }\OtherTok{\textless{}{-}} \FunctionTok{gridfuction}\NormalTok{(soyharvest19)}
+\NormalTok{cornharvest20 }\OtherTok{\textless{}{-}} \FunctionTok{gridfuction}\NormalTok{(cornharvest20)}
+\NormalTok{cornseed18 }\OtherTok{\textless{}{-}} \FunctionTok{gridfuction}\NormalTok{(cornseed18)}
+\NormalTok{cornseed20 }\OtherTok{\textless{}{-}} \FunctionTok{gridfuction}\NormalTok{(cornseed20)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Showcase of how the grid looks at a singular data set bases}
+\FunctionTok{plot}\NormalTok{(row }\SpecialCharTok{\textasciitilde{}}\NormalTok{ column,}\AttributeTok{data=}\NormalTok{cornseed20)}
+\FunctionTok{abline}\NormalTok{(}\AttributeTok{h=}\DecValTok{1}\SpecialCharTok{:}\DecValTok{12}\FloatTok{+0.5}\NormalTok{,}\AttributeTok{v=}\DecValTok{1}\SpecialCharTok{:}\DecValTok{20}\FloatTok{+0.5}\NormalTok{,}\AttributeTok{col=}\StringTok{\textquotesingle{}red\textquotesingle{}}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Ben.Loos.Final_files/figure-latex/unnamed-chunk-2-1.pdf}}
+\#\# Aggregate data
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#aggregation of each data frame and produce a variable that fits the final data format}
+\NormalTok{soyharvest17agg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yield }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ soyharvest17, mean)}
+\NormalTok{soyharvest17agg}\SpecialCharTok{$}\NormalTok{Y17 }\OtherTok{\textless{}{-}}\NormalTok{ soyharvest17agg}\SpecialCharTok{$}\NormalTok{Yield}
+\NormalTok{cornharvest18agg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yield }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornharvest18, mean)}
+\NormalTok{cornharvest18agg}\SpecialCharTok{$}\NormalTok{Y18 }\OtherTok{\textless{}{-}}\NormalTok{ cornharvest18agg}\SpecialCharTok{$}\NormalTok{Yield}
+\NormalTok{cornseed18agg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(AppliedRate }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornseed18, mean)}
+\NormalTok{cornseed18agg}\SpecialCharTok{$}\NormalTok{AR18 }\OtherTok{\textless{}{-}}\NormalTok{ cornseed18agg}\SpecialCharTok{$}\NormalTok{AppliedRate}
+\NormalTok{soyharvest19agg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yield }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ soyharvest19, mean)}
+\NormalTok{soyharvest19agg}\SpecialCharTok{$}\NormalTok{Y19 }\OtherTok{\textless{}{-}}\NormalTok{ soyharvest19agg}\SpecialCharTok{$}\NormalTok{Yield}
+\NormalTok{cornharvest20agg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yield }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornharvest20, mean)}
+\NormalTok{cornharvest20agg}\SpecialCharTok{$}\NormalTok{Y20 }\OtherTok{\textless{}{-}}\NormalTok{ cornharvest20agg}\SpecialCharTok{$}\NormalTok{Yield}
+\NormalTok{cornseed20agg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(AppliedRate }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornseed20 , mean)}
+\NormalTok{cornseed20agg}\SpecialCharTok{$}\NormalTok{AR20 }\OtherTok{\textless{}{-}}\NormalTok{ cornseed20agg}\SpecialCharTok{$}\NormalTok{AppliedRate}
+\end{Highlighting}
+\end{Shaded}
+
+\subsection{Merge data}\label{merge-data}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#Combining the individual aggregated data set into one central table with a merged \textquotesingle{}Cell\textquotesingle{} variable}
+\NormalTok{combine }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(soyharvest17agg, cornharvest18agg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\NormalTok{combine }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combine, cornseed18agg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\NormalTok{combine }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combine, soyharvest19agg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\NormalTok{combine }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combine, cornharvest20agg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in merge.data.frame(combine, cornharvest20agg, by = "cell"): column
+## names 'Yield.x', 'Yield.y' are duplicated in the result
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{Combined }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combine, cornseed20agg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in merge.data.frame(combine, cornseed20agg, by = "cell"): column names
+## 'Yield.x', 'Yield.y' are duplicated in the result
+\end{verbatim}
+
+To help with interpreting and aligning the data to make it easier for
+comparison we will normalize the data using the percent-of-mean. For
+this approach we will observe i in year j, the normalized value is
+defined as y\_ij\^{}*=100×y\_ij/y ‾\emph{(⋅j) , where y ‾}(⋅j ) swil be
+the mean of bu/acre that was given or the arithmetic mean of all
+observations for that variable in year j. This method will convert the
+values to percentages relative to the yearly average, allowing
+meaningful comparisons across crops with different units. This
+normalization within year will preserve spatial variation while removing
+scale differences across the dataset. By multiplying the values by 100
+we can indicate whether there is above-average or below-average yield
+performance. While not the only way for normalization, it is best for
+making the results easier to interpret spatially and more suitable for
+causal analysis involving agricultural decisions where exact values are
+less important than if performance is exceeding or fewer than the
+projection.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\#creating a function to make it easier to bring the percent to every measurement that we want to look at.we want to }
+\NormalTok{percentseeding }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) \{}
+    \DecValTok{100} \SpecialCharTok{*}\NormalTok{ x }\SpecialCharTok{/} \FunctionTok{mean}\NormalTok{(x, }\AttributeTok{na.rm =} \ConstantTok{TRUE}\NormalTok{)}
+\NormalTok{\}}
+\NormalTok{percentsoybean }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) \{}
+    \DecValTok{100} \SpecialCharTok{*}\NormalTok{ x }\SpecialCharTok{/} \DecValTok{60}
+\NormalTok{\}}
+\NormalTok{percentcorn }\OtherTok{\textless{}{-}} \ControlFlowTok{function}\NormalTok{(x) \{}
+    \DecValTok{100} \SpecialCharTok{*}\NormalTok{ x }\SpecialCharTok{/} \DecValTok{180}
+\NormalTok{\}}
+\CommentTok{\#Bringing the percent function into every variable that we intend to look at }
+\NormalTok{soyharvest17}\SpecialCharTok{$}\NormalTok{Yieldnorm }\OtherTok{\textless{}{-}} \FunctionTok{percentsoybean}\NormalTok{(soyharvest17}\SpecialCharTok{$}\NormalTok{Yield)}
+\NormalTok{cornharvest18}\SpecialCharTok{$}\NormalTok{Yieldnorm }\OtherTok{\textless{}{-}} \FunctionTok{percentcorn}\NormalTok{(cornharvest18}\SpecialCharTok{$}\NormalTok{Yield)}
+\NormalTok{cornseed18}\SpecialCharTok{$}\NormalTok{AppliedRatenorm }\OtherTok{\textless{}{-}} \FunctionTok{percentseeding}\NormalTok{(cornseed18}\SpecialCharTok{$}\NormalTok{AppliedRate)}
+\NormalTok{soyharvest19}\SpecialCharTok{$}\NormalTok{Yieldnorm }\OtherTok{\textless{}{-}} \FunctionTok{percentsoybean}\NormalTok{(soyharvest19}\SpecialCharTok{$}\NormalTok{Yield)}
+\NormalTok{cornharvest20}\SpecialCharTok{$}\NormalTok{Yieldnorm }\OtherTok{\textless{}{-}} \FunctionTok{percentcorn}\NormalTok{(cornharvest20}\SpecialCharTok{$}\NormalTok{Yield)}
+\NormalTok{cornseed20}\SpecialCharTok{$}\NormalTok{AppliedRatenorm }\OtherTok{\textless{}{-}} \FunctionTok{percentseeding}\NormalTok{(cornseed20}\SpecialCharTok{$}\NormalTok{AppliedRate)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\CommentTok{\# We will aggregate the new data to help with making the data easier to read when we build the pairs plot }
+\NormalTok{soyharvest17normagg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yieldnorm }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ soyharvest17, mean)}
+\NormalTok{soyharvest17normagg}\SpecialCharTok{$}\NormalTok{Y17 }\OtherTok{\textless{}{-}}\NormalTok{ soyharvest17normagg}\SpecialCharTok{$}\NormalTok{Yieldnorm}
+\NormalTok{cornharvest18normagg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yieldnorm }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornharvest18, mean)}
+\NormalTok{cornharvest18normagg}\SpecialCharTok{$}\NormalTok{Y18 }\OtherTok{\textless{}{-}}\NormalTok{ cornharvest18normagg}\SpecialCharTok{$}\NormalTok{Yieldnorm}
+\NormalTok{cornseed18normagg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(AppliedRatenorm }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornseed18, mean)}
+\NormalTok{cornseed18normagg}\SpecialCharTok{$}\NormalTok{AR18 }\OtherTok{\textless{}{-}}\NormalTok{ cornseed18normagg}\SpecialCharTok{$}\NormalTok{AppliedRatenorm}
+\NormalTok{soyharvest19normagg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yieldnorm }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ soyharvest19, mean)}
+\NormalTok{soyharvest19normagg}\SpecialCharTok{$}\NormalTok{Y19 }\OtherTok{\textless{}{-}}\NormalTok{ soyharvest19normagg}\SpecialCharTok{$}\NormalTok{Yieldnorm}
+\NormalTok{cornharvest20normagg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(Yieldnorm }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornharvest20, mean)}
+\NormalTok{cornharvest20normagg}\SpecialCharTok{$}\NormalTok{Y20 }\OtherTok{\textless{}{-}}\NormalTok{ cornharvest20normagg}\SpecialCharTok{$}\NormalTok{Yieldnorm}
+\NormalTok{cornseed20normagg }\OtherTok{\textless{}{-}} \FunctionTok{aggregate}\NormalTok{(AppliedRatenorm }\SpecialCharTok{\textasciitilde{}}\NormalTok{ cell, }\AttributeTok{data =}\NormalTok{ cornseed20 , mean)}
+\NormalTok{cornseed20normagg}\SpecialCharTok{$}\NormalTok{AR20 }\OtherTok{\textless{}{-}}\NormalTok{ cornseed20normagg}\SpecialCharTok{$}\NormalTok{AppliedRatenorm}
+\end{Highlighting}
+\end{Shaded}
+
+Combining the data sets together to help with comparison between the
+yields and seeding.
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{combinenorm }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(soyharvest17normagg, cornharvest18normagg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\NormalTok{combinenorm }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combinenorm, cornseed18normagg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\NormalTok{combinenorm }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combinenorm, soyharvest19normagg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\NormalTok{combinenorm }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combinenorm, cornharvest20normagg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in merge.data.frame(combinenorm, cornharvest20normagg, by = "cell"):
+## column names 'Yieldnorm.x', 'Yieldnorm.y' are duplicated in the result
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{CombinedNorm }\OtherTok{\textless{}{-}} \FunctionTok{merge}\NormalTok{(combinenorm, cornseed20normagg, }\AttributeTok{by =} \StringTok{"cell"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning in merge.data.frame(combinenorm, cornseed20normagg, by = "cell"):
+## column names 'Yieldnorm.x', 'Yieldnorm.y' are duplicated in the result
+\end{verbatim}
+
+\begin{itemize}
+\tightlist
+\item
+  Here we are displaying how the variables that we created in the grid
+  will help define how we produce the results and findings.It's a great
+  visual to show connection and relationship of the variables.
+\end{itemize}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\ControlFlowTok{if}\NormalTok{ (}\SpecialCharTok{!}\FunctionTok{requireNamespace}\NormalTok{(}\StringTok{"BiocManager"}\NormalTok{, }\AttributeTok{quietly =} \ConstantTok{TRUE}\NormalTok{))}
+    \FunctionTok{install.packages}\NormalTok{(}\StringTok{"BiocManager"}\NormalTok{)}
+\FunctionTok{install.packages}\NormalTok{(}\StringTok{"bnlearn"}\NormalTok{)}
+
+\NormalTok{BiocManager}\SpecialCharTok{::}\FunctionTok{install}\NormalTok{(}\StringTok{"Rgraphviz"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{library}\NormalTok{(bnlearn)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Warning: package 'bnlearn' was built under R version 4.5.2
+\end{verbatim}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{modela.dag }\OtherTok{\textless{}{-}} \FunctionTok{model2network}\NormalTok{(}\StringTok{"[Y17][AR18|Y17][Y18|AR18:Y17]"}\NormalTok{)}
+\NormalTok{fita }\OtherTok{=} \FunctionTok{bn.fit}\NormalTok{(modela.dag, Combined[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y17\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR18\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y18\textquotesingle{}}\NormalTok{)])}
+
+\NormalTok{strengtha }\OtherTok{\textless{}{-}} \FunctionTok{arc.strength}\NormalTok{(modela.dag, Combined[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y17\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR18\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y18\textquotesingle{}}\NormalTok{)])}
+\FunctionTok{strength.plot}\NormalTok{(modela.dag, strengtha)}
+\end{Highlighting}
+\end{Shaded}
+
+\begin{verbatim}
+## Loading required namespace: Rgraphviz
+\end{verbatim}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Ben.Loos.Final_files/figure-latex/unnamed-chunk-9-1.pdf}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{modelb.dag }\OtherTok{\textless{}{-}} \FunctionTok{model2network}\NormalTok{(}\StringTok{"[Y19][AR20|Y19][Y20|AR20:Y19]"}\NormalTok{)}
+\NormalTok{fitv }\OtherTok{=} \FunctionTok{bn.fit}\NormalTok{(modelb.dag, Combined[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y19\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR20\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y20\textquotesingle{}}\NormalTok{)])}
+
+\NormalTok{strengthb }\OtherTok{\textless{}{-}} \FunctionTok{arc.strength}\NormalTok{(modelb.dag, Combined[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y19\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR20\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y20\textquotesingle{}}\NormalTok{)])}
+\FunctionTok{strength.plot}\NormalTok{(modelb.dag, strengthb)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Ben.Loos.Final_files/figure-latex/unnamed-chunk-9-2.pdf}}
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\NormalTok{modelc.dag }\OtherTok{\textless{}{-}} \FunctionTok{model2network}\NormalTok{(}\StringTok{"[Y17][AR18|Y17][Y18|AR18:Y17][Y19|Y17:AR18:Y18][AR20|Y19][Y20|AR20:Y19]"}\NormalTok{)}
+\NormalTok{fitc }\OtherTok{=} \FunctionTok{bn.fit}\NormalTok{(modelc.dag, Combined[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y17\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR18\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y18\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y19\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR20\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y20\textquotesingle{}}\NormalTok{)])}
+
+\NormalTok{strengthc }\OtherTok{\textless{}{-}} \FunctionTok{arc.strength}\NormalTok{(modelc.dag, Combined[,}\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y17\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR18\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y18\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y19\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR20\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y20\textquotesingle{}}\NormalTok{)])}
+\FunctionTok{strength.plot}\NormalTok{(modelc.dag, strengthc)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Ben.Loos.Final_files/figure-latex/unnamed-chunk-9-3.pdf}}
+\#\#Pair Plots \#Original using pair plot to showcase how the data
+columns represent the yield variables
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pairs}\NormalTok{(Combined[, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y17\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}AR18\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Y18\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Y19\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}AR20\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Y20\textquotesingle{}}\NormalTok{)], }\AttributeTok{main =} \StringTok{"Pairs Plot of Aggregated Yield Variables"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Ben.Loos.Final_files/figure-latex/unnamed-chunk-10-1.pdf}}
+\#Normalized Plot
+
+\begin{Shaded}
+\begin{Highlighting}[]
+\FunctionTok{pairs}\NormalTok{(CombinedNorm[, }\FunctionTok{c}\NormalTok{(}\StringTok{\textquotesingle{}Y17\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}AR18\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Y18\textquotesingle{}}\NormalTok{, }\StringTok{\textquotesingle{}Y19\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}AR20\textquotesingle{}}\NormalTok{,}\StringTok{\textquotesingle{}Y20\textquotesingle{}}\NormalTok{)],}
+    \AttributeTok{main =} \StringTok{"Pairs Plot of Normalized Yield and Seeding Data"}\NormalTok{)}
+\end{Highlighting}
+\end{Shaded}
+
+\pandocbounded{\includegraphics[keepaspectratio]{Ben.Loos.Final_files/figure-latex/unnamed-chunk-11-1.pdf}}
+
+The output of the analysis shows what the use of normalization looks for
+the seeding plots. As we can see in the results there is not a huge
+difference what we see from the original data and the new normalized
+data set. This could indicate that there are not huge fluctuation within
+the variables that can change the data .By aggregating yield and seeding
+data into consistent spatial grid cells and normalizing values across
+years, the analysis separates management effects from inherent field
+productivity. Including historical yield allows us to distinguish
+whether low corn yields are primarily associated with reduced seeding
+rates or reflect persistently low-yielding areas of the field. This
+structure supports causal inference by accounting for prior productivity
+when evaluating the effect of seeding rate on yield.
+
+\end{document}
