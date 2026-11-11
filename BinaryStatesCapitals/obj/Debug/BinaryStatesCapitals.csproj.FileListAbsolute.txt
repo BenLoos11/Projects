@@ -1,0 +1,40 @@
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe.config
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.pdb
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csprojResolveAssemblyReference.cache
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Form1.resources
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Properties.Resources.resources
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.GenerateResource.Cache
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.CoreCompileInputs.cache
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.exe
+C:\Users\mckeownj\Desktop\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.pdb
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe.config
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.pdb
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csprojAssemblyReference.cache
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Form1.resources
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Properties.Resources.resources
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.GenerateResource.cache
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.CoreCompileInputs.cache
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.exe
+C:\Users\mckeownj\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.pdb
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe.config
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.pdb
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.AssemblyReference.cache
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Form1.resources
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Properties.Resources.resources
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.GenerateResource.cache
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.CoreCompileInputs.cache
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.exe
+C:\Users\mckeownj\OneDrive - Dakota State University\Documents\BAP\Today\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.pdb
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe.config
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.exe
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\bin\Debug\BinaryStatesCapitals.pdb
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.AssemblyReference.cache
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Form1.resources
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.Properties.Resources.resources
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.GenerateResource.cache
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.csproj.CoreCompileInputs.cache
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.exe
+C:\Users\DSU\Downloads\BinarySearch\BinaryStatesCapitals\BinaryStatesCapitals\obj\Debug\BinaryStatesCapitals.pdb
